@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: Fraunces;
+    --font-body: "DM Sans";
+    --font-mono: "Geist Mono";
+    --radius: 0.75rem;
+
+    --background: 7.2 0.02 0;
+    --foreground: 90.2 0.045 1;
+    --card: 10.5 0.015 0;
+    --card-foreground: 88 0.04 1;
+    --popover: 12 0.02 0;
+    --popover-foreground: 88 0.04 1;
+
+    --primary: 41.8 0.145 15;
+    --primary-foreground: 90.2 0.045 1;
+
+    --secondary: 20 0.03 0;
+    --secondary-foreground: 72.8 0.145 66;
+    --muted: 15 0.025 0;
+    --muted-foreground: 65 0.02 0;
+
+    --accent: 72.8 0.145 66;
+    --accent-foreground: 7.2 0.02 0;
+
+    --destructive: 55 0.22 25;
+    --destructive-foreground: 90.2 0.045 1;
+
+    --border: 12 0.02 0;
+    --input: 12 0.02 0;
+    --ring: 41.8 0.145 15;
+
+    --chart-1: 41.8 0.145 15;
+    --chart-2: 72.8 0.145 66;
+    --chart-3: 45 0.12 40;
+    --chart-4: 55 0.1 20;
+    --chart-5: 65 0.08 10;
+
+    --sidebar: 10.5 0.015 0;
+    --sidebar-foreground: 88 0.04 1;
+    --sidebar-primary: 41.8 0.145 15;
+    --sidebar-primary-foreground: 90.2 0.045 1;
+    --sidebar-accent: 72.8 0.145 66;
+    --sidebar-accent-foreground: 7.2 0.02 0;
+    --sidebar-border: 12 0.02 0;
+    --sidebar-ring: 41.8 0.145 15;
+  }
+
+  .dark {
+    --background: 7.2 0.02 0;
+    --foreground: 90.2 0.045 1;
+    --card: 10.5 0.015 0;
+    --card-foreground: 88 0.04 1;
+    --popover: 12 0.02 0;
+    --popover-foreground: 88 0.04 1;
+
+    --primary: 41.8 0.145 15;
+    --primary-foreground: 90.2 0.045 1;
+
+    --secondary: 20 0.03 0;
+    --secondary-foreground: 72.8 0.145 66;
+    --muted: 15 0.025 0;
+    --muted-foreground: 65 0.02 0;
+
+    --accent: 72.8 0.145 66;
+    --accent-foreground: 7.2 0.02 0;
+
+    --destructive: 55 0.22 25;
+    --destructive-foreground: 90.2 0.045 1;
+
+    --border: 12 0.02 0;
+    --input: 12 0.02 0;
+    --ring: 41.8 0.145 15;
+
+    --chart-1: 41.8 0.145 15;
+    --chart-2: 72.8 0.145 66;
+    --chart-3: 45 0.12 40;
+    --chart-4: 55 0.1 20;
+    --chart-5: 65 0.08 10;
+
+    --sidebar: 10.5 0.015 0;
+    --sidebar-foreground: 88 0.04 1;
+    --sidebar-primary: 41.8 0.145 15;
+    --sidebar-primary-foreground: 90.2 0.045 1;
+    --sidebar-accent: 72.8 0.145 66;
+    --sidebar-accent-foreground: 7.2 0.02 0;
+    --sidebar-border: 12 0.02 0;
+    --sidebar-ring: 41.8 0.145 15;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .gradient-romantic {
+    background: linear-gradient(
+      135deg,
+      oklch(41.8 0.145 15),
+      oklch(72.8 0.145 66)
+    );
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .glass-effect {
+    background: oklch(7.2 0.02 0 / 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid oklch(41.8 0.145 15 / 0.2);
+  }
+
+  .font-display {
+    font-family: var(--font-display), serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), sans-serif;
+  }
+
+  .text-pink {
+    color: oklch(90.2 0.045 1);
+  }
+
+  .gold-text {
+    color: oklch(72.8 0.145 66);
+  }
+
+  .wine-border {
+    border-color: oklch(41.8 0.145 15 / 0.4);
+  }
+}

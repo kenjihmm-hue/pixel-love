@@ -1,0 +1,14 @@
+type PhotoMeta = 
+ record {
+   caption: text;
+   dateTaken: text;
+   id: PhotoId;
+   url: text;
+ };
+type PhotoId = nat;
+service : {
+  checkPassword: (password: text) -> (bool) query;
+  getAnniversaryTimestamp: () -> (int) query;
+  getDailyMessage: () -> (text) query;
+  getPhotos: () -> (vec PhotoMeta) query;
+}

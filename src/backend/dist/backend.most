@@ -1,0 +1,21 @@
+// Version: 1.0.0
+type DailyMessage__342292320 = {text : Text};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type PhotoId__38188305 = Nat;
+type PhotoMeta__256544441 =
+  {caption : Text; dateTaken : Text; id : PhotoId__38188305; url : Text};
+actor {
+  stable messages :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?DailyMessage__342292320]];
+      var elementIndex : Nat__490723111
+    };
+  stable photos :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?PhotoMeta__256544441]];
+      var elementIndex : Nat__490723111
+    }
+};

@@ -1,0 +1,28 @@
+{
+  "overview": "A private, password-protected couple website with a wine red romantic luxury aesthetic. Features an animated welcome screen, interactive polaroid photo wall, love meter widget, live time-since-we-met counter, floating hearts, cursor sparkles, and a scrolling page with parallax effects — all personalized for Aidan and Falak.",
+  "features": [
+    "Password-protected login with session persistence",
+    "Animated 'Welcome to Pixel Love' hero screen",
+    "Interactive polaroid photo wall with fullscreen lightbox, hover captions, shuffle & slideshow modes",
+    "Love Meter widget with random 95–100% reveal",
+    "Live time-since-we-met counter (days, hours, minutes)",
+    "Anniversary countdown",
+    "Message of the day",
+    "Floating hearts on click, cursor sparkle trail",
+    "Parallax scrolling background",
+    "Wine Red / Deep Burgundy / Gold / Soft Pink color scheme",
+    "Credits footer: Aidan × Falak"
+  ],
+  "category": "personal",
+  "tags": [
+    "couple",
+    "romantic",
+    "private",
+    "photo-wall",
+    "love",
+    "personal",
+    "luxury",
+    "interactive"
+  ],
+  "last_updated": "2026-04-19T13:16:05.306Z"
+}
